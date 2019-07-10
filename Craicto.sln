@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craicto.Pipes", "Craicto.Pipes\Craicto.Pipes.csproj", "{62DF33D5-9E42-48AE-B16D-72A8BC806C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craicto.Pipes.Example", "Craicto.Pipes.Example\Craicto.Pipes.Example.csproj", "{DEF031F7-09A7-499D-90E5-FE2C45296E83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62DF33D5-9E42-48AE-B16D-72A8BC806C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DF33D5-9E42-48AE-B16D-72A8BC806C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DF33D5-9E42-48AE-B16D-72A8BC806C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DF33D5-9E42-48AE-B16D-72A8BC806C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF031F7-09A7-499D-90E5-FE2C45296E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF031F7-09A7-499D-90E5-FE2C45296E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF031F7-09A7-499D-90E5-FE2C45296E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF031F7-09A7-499D-90E5-FE2C45296E83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
