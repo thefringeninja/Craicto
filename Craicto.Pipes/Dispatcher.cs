@@ -15,7 +15,7 @@ namespace Craicto.Pipes
         }
 
         public void Subscribe<T>(Handler<T> handler)
-            where T: class
+            where T : class
         {
             if (!_handlers.TryGetValue(typeof(T), out var handlers))
             {

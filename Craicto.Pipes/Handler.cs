@@ -5,7 +5,7 @@ namespace Craicto.Pipes
         public static IPipelineBuilder<T> Of<T>() => new PipelineBuilder<T>();
 
         public static Handler<TInput> Narrow<TOutput, TInput>(Handler<TOutput> handler)
-            where TOutput: TInput
+            where TOutput : TInput
             => (message, ct) => handler((TOutput) message, ct);
 
         public static Handler<TOutput> Widen<TInput, TOutput>(Handler<TOutput> handler)

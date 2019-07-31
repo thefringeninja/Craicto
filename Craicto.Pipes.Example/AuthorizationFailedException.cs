@@ -8,7 +8,6 @@ namespace Craicto.Pipes.Example
         public AuthorizationFailedException(ClaimsPrincipal subject)
             : base($"Subject {subject.Identity.Name} was not authorized.")
         {
-            
         }
     }
 }

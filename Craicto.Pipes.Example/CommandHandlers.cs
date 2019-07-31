@@ -24,26 +24,22 @@ namespace Craicto.Pipes.Example
             };
         }
 
-        public static Handler<DoSomething> DoSomething(Dispatcher bus)
+        public static Handler<DoSomething> DoSomething(UnitOfWorkSomethingRepository somethings)
             => (message, ct) =>
             {
-                Task.Run(() => bus.Handle(new SomethingHappened
-                {
-                    SomethingId = message.SomethingId
-                }, CancellationToken.None));
+                var something = Something.Happens(new SomethingIdentifier(message.SomethingId));
+
+                somethings.Add(something);
 
                 return Task.CompletedTask;
             };
 
-        public static Handler<DoSomethingElse> DoSomethingElse(Dispatcher bus)
-            => (message, ct) =>
+        public static Handler<DoSomethingElse> DoSomethingElse(ISomethingRepository somethings)
+            => async (message, ct) =>
             {
-                Task.Run(() => bus.Handle(new SomethingElseHappened
-                {
-                    SomethingId = message.SomethingId
-                }, CancellationToken.None));
+                var something = await somethings.GetById(new SomethingIdentifier(message.SomethingId));
 
-                return Task.CompletedTask;
+                something.ElseDo();
             };
     }
 }

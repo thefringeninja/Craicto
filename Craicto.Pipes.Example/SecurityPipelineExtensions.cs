@@ -16,7 +16,7 @@ namespace Craicto.Pipes.Example
 
             return next(message, ct);
         });
-        
+
         public static IPipelineBuilder<MessageEnvelope<T>> RequiresAnyClaim<T>(
             this IPipelineBuilder<MessageEnvelope<T>> builder,
             params Claim[] claims) => builder.Pipe(next => (message, ct) =>
@@ -28,6 +28,5 @@ namespace Craicto.Pipes.Example
 
             return next(message, ct);
         });
-
     }
 }
